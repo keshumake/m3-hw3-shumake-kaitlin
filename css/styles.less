@@ -84,8 +84,25 @@ header {
     }
 }
 
+.maincontent {
+    padding: @padding;
+    background-color: @body-bg-color;
+}
 .bestburgers {
     padding: @padding;
     height: @height;
 
+}
+
+footer {
+    padding: @padding;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: @darkbg;
+    border-top: 10px solid @header-background;
+    img {
+        width: @image-width;
+    }
 }
