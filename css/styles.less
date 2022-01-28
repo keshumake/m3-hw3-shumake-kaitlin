@@ -1,25 +1,84 @@
-@import 'variables.less';
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "variables.less";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-html, body {
-	border: 0;
-	font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
-	line-height: 1.5;
-	margin: 0;
-	padding: 0;
+html,
+body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
-div, span, object, iframe, img, table, caption, thead, tbody,
-tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu,
-nav, footer, header, section, summary, mark, audio, video {
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code,
-del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
-ol, ul, li, fieldset, legend, label {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
@@ -27,15 +86,28 @@ ol, ul, li, fieldset, legend, label {
   padding: 0;
 }
 
-article, aside, canvas, figure, figure img, figcaption, hgroup,
-footer, header, nav, section, audio, video {
-	display: block;
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
 }
 
 table {
   border-collapse: separate;
   border-spacing: 0;
-  caption, th, td {
+  caption,
+  th,
+  td {
     text-align: left;
     vertical-align: middle;
   }
@@ -50,59 +122,66 @@ a img {
 }
 
 header {
-    background-color: @header-background;
-    padding: @padding;
-    ul {
-        display: inline;
-        text-decoration: none;
-        li {
-        color: @text-color;
-        font-weight: @font-weight;
-        text-transform: @upper;
-        font-family: @main-font;
+  background-color: @header-background;
+  padding: @padding;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  ul {
+    list-style-type: none;
+    display: flex;
+    li {
+      color: @text-color;
+      font-weight: @font-weight;
+      font-family: @main-font;
+      padding: @padding;
     }
     .order {
-        color: @link-color;
+      color: @link-color;
+      text-transform: @upper;
     }
-    }
+  }
 }
 
 .jumbotron {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: @height;
-    background-image: url(/img/banner-bg.png);
-    background-color: @imageoverlay 33%;
-    .ordernow {
-        background-color: @header-background;
-        padding: 20px;
-        border-radius: 10px;
-        border: 0;
-        text-transform: @upper;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: @height;
+  background-image: url(/img/banner-bg.png);
+  background-color: @imageoverlay;
+  background-blend-mode: overlay;
+  .ordernow {
+    background-color: @header-background;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0;
+    text-transform: @upper;
+  }
 }
 
 .maincontent {
-    padding: @padding;
-    background-color: @body-bg-color;
+  padding: @padding;
+  background-color: @body-bg-color;
 }
 .bestburgers {
-    padding: @padding;
-    height: @height;
+  padding: @padding;
+  height: @height;
+  display: flex;
+  .burgerimg {
 
 }
 
 footer {
-    padding: @padding;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: @darkbg;
-    border-top: 10px solid @header-background;
-    img {
-        width: @image-width;
-    }
+  padding: @padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: @darkbg;
+  border-top: 10px solid @header-background;
+  img {
+    width: @image-width;
+  }
 }
