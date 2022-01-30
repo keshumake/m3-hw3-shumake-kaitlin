@@ -121,6 +121,22 @@ a img {
   outline: 0;
 }
 
+#divformatting,
+.divformatting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#paragraph,
+.paragraph {
+  font-size: @paragraph;
+  font-weight: @font-weight;
+  font-family: @main-font;
+  padding-bottom: @bottompadding;
+}
+
 header {
   background-color: @header-background;
   padding: @padding;
@@ -162,15 +178,11 @@ header {
   }
 }
 
-.maincontent {
-  padding: @padding;
-  background-color: @body-bg-color;
-}
+
+
 .bestburgers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  #divformatting();
+  background-color: #fff;
   .burgerinfo {
     padding: @padding;
     h2 {
@@ -183,10 +195,7 @@ header {
       }
     }
     p {
-      font-size: @paragraph;
-      font-weight: @font-weight;
-      font-family: @main-font;
-      padding-bottom: @bottompadding;
+      #paragraph();
     }
     .ordernow {
       background-color: @header-background;
@@ -199,10 +208,8 @@ header {
 }
 
 .dinein {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .divformatting();
+  background-color: @body-bg-color;
   .dineininfo {
     padding: @padding;
     h2 {
@@ -210,15 +217,18 @@ header {
       text-transform: @upper;
       font-family: @main-font;
       padding-bottom: @bottompadding;
+      .lower {
+        text-transform: @lower;
+      }
+      .infospan {
+        color: @link-color;
+      }
     }
     .infospan {
       color: @link-color;
     }
     p {
-      font-size: @paragraph;
-      font-weight: @font-weight;
-      font-family: @main-font;
-      padding-bottom: @bottompadding;
+      .paragraph();
     }
     button.ordernow {
       background-color: @header-background;
