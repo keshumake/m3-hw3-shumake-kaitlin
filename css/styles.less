@@ -130,6 +130,7 @@ header {
   ul {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     li {
       color: @text-color;
       font-weight: @font-weight;
@@ -166,11 +167,64 @@ header {
   background-color: @body-bg-color;
 }
 .bestburgers {
-  padding: @padding;
-  height: @height;
   display: flex;
-  .burgerimg {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .burgerinfo {
+    padding: @padding;
+    h2 {
+      font-size: @headings;
+      text-transform: @upper;
+      font-family: @main-font;
+      padding-bottom: @bottompadding;
+      .infospan {
+        color: @link-color;
+      }
+    }
+    p {
+      font-size: @paragraph;
+      font-weight: @font-weight;
+      font-family: @main-font;
+      padding-bottom: @bottompadding;
+    }
+    .ordernow {
+      background-color: @header-background;
+      padding: 20px;
+      border-radius: 10px;
+      border: 0;
+      text-transform: @upper;
+    }
+  }
+}
 
+.dinein {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: @headings;
+    text-transform: @upper;
+    font-family: @main-font;
+    padding-bottom: @bottompadding;
+    .infospan {
+      color: @link-color;
+    }
+    p {
+      font-size: @paragraph;
+      font-weight: @font-weight;
+      font-family: @main-font;
+      padding-bottom: @bottompadding;
+    }
+    .ordernow {
+      background-color: @header-background;
+      padding: 20px;
+      border-radius: 10px;
+      border: 0;
+      text-transform: @upper;
+    }
+  }
 }
 
 footer {
@@ -182,6 +236,50 @@ footer {
   background-color: @darkbg;
   border-top: 10px solid @header-background;
   img {
+    width: 100%;
+  }
+}
+
+
+@media screen and (min-width: 250px) {
+  .headerlogo {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .headerlogo {
+    width: 50%;
+  }
+  .bestburgers {
+    flex-direction: column;    
+    .burgerimg {
+      padding: @padding;
+    }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  img.headerlogo {
+    width: @image-width;
+}
+  .bestburgers {
+    height: @height;
+    padding: @padding;
+    flex-direction: row;
+    .burgerinfo {
+      width: 50%;
+    }
+  }
+
+  .dinein {
+    height: @height;
+    padding: @padding;
+    flex-direction: row;
+  }
+
+  footer img {
     width: @image-width;
   }
+
 }
