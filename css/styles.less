@@ -203,11 +203,14 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h2 {
-    font-size: @headings;
-    text-transform: @upper;
-    font-family: @main-font;
-    padding-bottom: @bottompadding;
+  .dineininfo {
+    padding: @padding;
+    h2 {
+      font-size: @headings;
+      text-transform: @upper;
+      font-family: @main-font;
+      padding-bottom: @bottompadding;
+    }
     .infospan {
       color: @link-color;
     }
@@ -217,7 +220,7 @@ header {
       font-family: @main-font;
       padding-bottom: @bottompadding;
     }
-    .ordernow {
+    button.ordernow {
       background-color: @header-background;
       padding: 20px;
       border-radius: 10px;
@@ -240,7 +243,6 @@ footer {
   }
 }
 
-
 @media screen and (min-width: 250px) {
   .headerlogo {
     width: 100%;
@@ -252,21 +254,25 @@ footer {
     width: 50%;
   }
   .bestburgers {
-    flex-direction: column;    
+    flex-direction: column;
     .burgerimg {
       padding: @padding;
     }
+  }
+
+  .headshot {
+    padding: padding;
   }
 }
 
 @media screen and (min-width: 650px) {
   img.headerlogo {
     width: @image-width;
-}
+  }
   .bestburgers {
     height: @height;
     padding: @padding;
-    flex-direction: row;
+    flex-direction: row-reverse;
     .burgerinfo {
       width: 50%;
     }
@@ -276,10 +282,16 @@ footer {
     height: @height;
     padding: @padding;
     flex-direction: row;
+    .dineininfo {
+      width: 50%;
+    }
   }
 
   footer img {
     width: @image-width;
   }
 
+  .bobphoto {
+    padding: @padding;
+  }
 }
